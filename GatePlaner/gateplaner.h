@@ -3,7 +3,7 @@
 #include "ui_gateplaner.h"
 #include "DataManager.h"
 #include "readexcel.h"
-
+using namespace std;
 class GatePlaner : public QMainWindow{
 	Q_OBJECT
 
@@ -17,6 +17,7 @@ public:
 
 private:
 	Ui::GatePlanerClass ui;
+	list<QString> Gateslist;	//备选登机口队列
 	DataManager m_DataSource;
 	void MakePucksData();
 	void MakeTicketsData();
@@ -30,4 +31,10 @@ private:
 	void displayTickets(TicketsTypeList& records);
 	void displayGates(GatesType& record);
 	void displayGates(GatesTypeList& records);
+	void distributeGatesByQuestion1();		//根据问题一分配登机口
+	int explainTimeString(char* str);
+	int explainDataString(char* str);
+	int getUsedTimes(QString GateID);
+	void BlockGate(QString GateID,int DeblockTime);
+	void DeblockGate(QString GateID);
 };

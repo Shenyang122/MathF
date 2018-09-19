@@ -127,6 +127,7 @@ public:
     {
         GatePlanerClass->setWindowTitle(QApplication::translate("GatePlanerClass", "GatePlaner", 0, QApplication::UnicodeUTF8));
         QTreeWidgetItem *___qtreewidgetitem = tablePucks->headerItem();
+        ___qtreewidgetitem->setText(10, QApplication::translate("GatePlanerClass", "\347\231\273\346\234\272\345\217\243", 0, QApplication::UnicodeUTF8));
         ___qtreewidgetitem->setText(9, QApplication::translate("GatePlanerClass", "\345\207\272\345\217\221\347\261\273\345\236\213", 0, QApplication::UnicodeUTF8));
         ___qtreewidgetitem->setText(8, QApplication::translate("GatePlanerClass", "\345\207\272\345\217\221\350\210\252\347\217\255", 0, QApplication::UnicodeUTF8));
         ___qtreewidgetitem->setText(7, QApplication::translate("GatePlanerClass", "\345\207\272\345\217\221\346\227\266\351\227\264", 0, QApplication::UnicodeUTF8));

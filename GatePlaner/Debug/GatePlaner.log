@@ -1,7 +1,7 @@
-﻿生成启动时间为 2018/9/19 星期三 上午 1:37:56。
+﻿生成启动时间为 2018/9/19 星期三 上午 5:01:31。
      1>项目“C:\Users\Administrator\Downloads\MathF\GatePlaner\GatePlaner.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
-         正在创建“Debug\GatePlaner.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+         正在对“Debug\GatePlaner.unsuccessfulbuild”执行 Touch 任务。
        CustomBuild:
          所有输出均为最新。
        ClCompile:
@@ -29,4 +29,4 @@
 
 生成成功。
 
-已用时间 00:00:04.93
+已用时间 00:00:04.76

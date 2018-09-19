@@ -11,8 +11,8 @@ public:
 	char GateID[8];				//登机口ID
 	char TerminalHall[8];		//终端厅
 	char Area[8];				//区域
-	char ArriveType[8];			//到达类型
-	char DepartType[8];			//出发类型
+	char ArriveType[16];			//到达类型
+	char DepartType[16];			//出发类型
 	char PlaneSize[8];			//飞机体型类别
 	//额外属性
 	QString* strGateID;			//str登机口ID
@@ -23,6 +23,7 @@ public:
 	QString* strPlaneSize;		//str飞机体型类别
 	int isBlocked;				//是否被屏蔽
 	int UsedTimes;				//被使用的次数
+	int DeblockTime;			//解封时间
 };
 // 多条记录（列表）
 typedef list<GatesType> GatesTypeList;

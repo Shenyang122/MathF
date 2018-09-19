@@ -21,14 +21,13 @@ public:
 	char ArriveType[8];			//到达类型
 	char DepartType[8];			//出发类型
 	//额外属性
-	int BlockTime;				//屏蔽登机口时间
+	int BlockTime;				//屏蔽登机口时间(约定每5分钟为1个离散值，从19日凌晨0点起计时，则24*12=288是20日0时，576是21日零时)
 	int DeblockTime;			//解除屏蔽登机口时间
+	int DigitalArriveTime;		//数字化到达时间
+	int DigitalDepartTime;		//数字化起飞时间
+	QString* strArriveGate;		//停靠的登机口的位置
 	QString* strPlaneID;		//str飞机转场记录号
-	QString* strArriveDate;		//str到达日期
-	QString* strArriveTive;		//str到达时间
 	QString* strArriveFlight;	//str到达航班
-	QString* strDepartDate;		//str出发日期
-	QString* strDepartTime;		//str出发时间
 	QString* strDepartFlight;	//str出发航班
 	QString* strArriveType;		//str到达类型
 	QString* strDepartType;		//str出发类型

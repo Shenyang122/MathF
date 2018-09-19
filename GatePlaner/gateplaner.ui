@@ -80,6 +80,11 @@
             <string>出发类型</string>
            </property>
           </column>
+          <column>
+           <property name="text">
+            <string>登机口</string>
+           </property>
+          </column>
          </widget>
         </item>
        </layout>
