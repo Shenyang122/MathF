@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GatePlanerClass</class>
+ <widget class="QMainWindow" name="GatePlanerClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>682</width>
+    <height>460</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>GatePlaner</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_4">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="movable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Pucks</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QTreeWidget" name="tablePucks">
+          <column>
+           <property name="text">
+            <string>飞机转场记录号</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>到达日期</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>到达时间</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>到达航班</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>到达类型</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>飞机型号</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>出发日期</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>出发时间</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>出发航班</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>出发类型</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>登机口</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Tickets</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QTreeWidget" name="tableTickets">
+          <column>
+           <property name="text">
+            <string notr="true">旅客记录号</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>乘客数量</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>到达日期</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>到达航班</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>出发日期</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>出发航班</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>Gates</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QTreeWidget" name="tableGates">
+          <column>
+           <property name="text">
+            <string notr="true">登机口</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>终端厅</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>区域</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>到达类型</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>出发类型</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>机体类别</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>682</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="gateplaner.qrc"/>
+ </resources>
+ <connections/>
+</ui>
