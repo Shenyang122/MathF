@@ -15,7 +15,22 @@ GatePlaner::GatePlaner(QWidget *parent, Qt::WFlags flags):QMainWindow(parent, fl
 	displayPucks(m_DataSource.listPucks());
 	displayTickets(m_DataSource.listTickets());
 	displayGates(m_DataSource.listGates());
-
+	int Wnum,Wvalidnum,Nnum,Nvalidnum;
+	Wnum=Wvalidnum=Nnum=Nvalidnum=0;
+	for(PucksTypeList::iterator iter = m_DataSource.m_Pucks.begin();iter!=m_DataSource.m_Pucks.end();iter++){
+		PucksType& record = *iter;
+		if(record.strPlaneSize->compare(QString("W"))){
+			Wnum++;
+			if(record.strArriveGate->length()>0){
+				Wvalidnum++;
+			}
+		}else{
+			Nnum++;
+			if(record.strArriveGate->length()>0){
+				Nvalidnum++;
+			}
+		}
+	}
 
 }
 GatePlaner::~GatePlaner(){}
@@ -144,6 +159,7 @@ void GatePlaner::InitPucksData(){
 			record.strPlaneSize = new QString("N");
 		}
 		record.DigitalArriveTime = explainTimeString(record.ArriveTime)+explainDataString(record.ArriveDate);
+		record.DigitalDepartTime = explainTimeString(record.DepartTime)+explainDataString(record.DepartDate);
 	}
 }
 void GatePlaner::InitTicketsData(){
@@ -212,7 +228,11 @@ int GatePlaner::explainTimeString(char* str){
 	}else{
 		h = (hstr[0]-'0')*10+hstr[1]-'0';
 	}
-	m = (mstr[0]-'0')*10+mstr[1]-'0';
+	if(strlen(mstr)==1){
+		m = mstr[0]-'0';
+	}else{
+		m = (mstr[0]-'0')*10+mstr[1]-'0';
+	}
 	DigitalTime = (h*60+m)/5;
 	if(isAM == 0){
 		DigitalTime += 144;
@@ -284,9 +304,10 @@ void GatePlaner::BlockGate(QString GateID,int DeblockTime){
 	for(GatesTypeList::iterator iter = m_DataSource.m_Gates.begin();iter!=m_DataSource.m_Gates.end();iter++){
 		GatesType& recordGate = *iter;
 		if(recordGate.strGateID->compare(GateID)==0){
-			recordGate.isBlocked = 1;
+			//recordGate.isBlocked = 1;
 			iter->isBlocked = 1;
-			recordGate.DeblockTime = DeblockTime;
+			//recordGate.DeblockTime = DeblockTime;
+			iter->DeblockTime = DeblockTime;
 		}
 	}
 }
